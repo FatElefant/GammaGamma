@@ -79,4 +79,81 @@ h1 {
 #skunk_score_card td {
   padding: 5px; }
 
+/* Countdown styling -----------------------------------------------------------------------------------------------------------*/
+#countdown_number_display {
+  width: 600px;
+  height: 100px;
+  margin: 30px;
+  background-color: gray;
+  border: 5px solid black;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-items: center;
+  justify-items: center; }
+
+.picked_number {
+  font-size: 50px;
+  padding: 10px; }
+
+#large_number_button {
+  background-color: gray;
+  height: 40px;
+  width: 200px;
+  margin-left: 80px;
+  border-radius: 5px; }
+
+#small_number_button {
+  background-color: gray;
+  height: 40px;
+  width: 200px;
+  margin-left: 100px;
+  border-radius: 5px; }
+
+@keyframes getready {
+  0% {
+    background-color: gray; }
+  15% {
+    background-color: yellow; }
+  30% {
+    background-color: gray; }
+  45% {
+    background-color: yellow; }
+  60% {
+    background-color: gray; }
+  75% {
+    background-color: yellow; }
+  90% {
+    background-color: gray; }
+  100% {
+    background-color: lightgreen; } }
+#target {
+  width: 600px;
+  height: 90px;
+  margin: 30px;
+  background-color: gray;
+  border: 5px solid black;
+  border-radius: 20px;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
+  animation-name: getready;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; }
+
+#clock {
+  background-color: lightcoral;
+  width: 200px;
+  height: 210px;
+  position: fixed;
+  left: 750px;
+  top: 100px;
+  font-size: 100px;
+  color: black;
+  border-radius: 30%;
+  border: 5px solid black;
+  text-align: center;
+  padding-top: 90px; }
+
 /*# sourceMappingURL=GammaGamma_Styling.css.map */

@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded',function(){
 // Create page elements -------------------------------------------------------------------------
+    // Set body id so it can be styled appropriately
+    document.body.id="countdown_body"
+
     // div where numbers will be shown once they are selected
     number_display = document.createElement('div');
     document.body.appendChild(number_display);
+    number_display.id='countdown_number_display'
 
     // Large number button for selecting a large number
     large_number_button = document.createElement('button');
@@ -16,15 +20,16 @@ document.addEventListener('DOMContentLoaded',function(){
     small_number_button.id="small_number_button";
     small_number_button.innerHTML = "Pick Small Number";
 
+    // target number that needs to be reached
+    target = document.createElement('div');
+    document.body.appendChild(target);
+    target.id="target";
+
     // clock for counting down the 30 seconds
     clock = document.createElement('div');
     document.body.appendChild(clock);
     clock.id="clock";
 
-    // target number that needs to be reached
-    target = document.createElement('div');
-    document.body.appendChild(target);
-    target.id="target";
 
 // Variables -------------------------------------------------------------------------------------
     // keeps track of how many numbers have been picked, will help when 6 have been picked
@@ -38,6 +43,12 @@ document.addEventListener('DOMContentLoaded',function(){
     let small_number_arr_start = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
     let small_number_arr = small_number_arr_start;
 
+    // Time variables for the clock
+    const time_limit = 30;
+    let time_passed = 0;
+    let time_left = time_limit;
+    let timerInterval = null;
+    clock.innerHTML=`${time_left}`
 
 // Functions ------------------------------------------------------------------------------------
     // Control what happens when a large number is picked ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,6 +58,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // Display the large number
     const picked_large_number = document.createElement('span');
     number_display.appendChild(picked_large_number);
+    picked_large_number.className = "picked_number"
     picked_large_number.innerHTML = `${large_number_arr[large_number_picked_index]}`;
 
     // Remove the number from the remaining large numbers
@@ -57,7 +69,10 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // Increment the picks counter and check to see if game needs to be started
     count_picks += 1;
-    if (count_picks == 6){startGame()};
+    if (count_picks == 6){
+      document.querySelector('#large_number_button').disabled = true;
+      document.querySelector('#small_number_button').disabled = true;
+      startGame()};
     }
 
     // Control what happens when a small number is picked ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,6 +82,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // Display the small number
     const picked_small_number = document.createElement('span');
     number_display.appendChild(picked_small_number);
+    picked_small_number.className = "picked_number"
     picked_small_number.innerHTML = `${small_number_arr[small_number_picked_index]}`;
 
     // Remove the number from the remaining small numbers
@@ -75,6 +91,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // Increment the picks counter and check to see if game needs to be started
     count_picks += 1;
     if (count_picks == 6){
+      document.querySelector('#large_number_button').disabled = true;
       document.querySelector('#small_number_button').disabled = true;
       startGame()};
     }
@@ -82,7 +99,14 @@ document.addEventListener('DOMContentLoaded',function(){
     // When six numbers have been picked, gameplay switches ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     function startGame(){
       target_number = Math.floor(Math.random()*1000);
-      target.innerHTML = `${target_number}`;
+      target.style.animationPlayState = 'running';
+      target.innerHTML = `Your target is: ${target_number}`;
+      startTimer();
+    }
+
+    //Function for helping the clock with the time
+    function startTimer(){
+      timerInterval = setInterval(()=>{time_passed += 1;time_left = time_limit-time_passed;document.getElementById('clock').innerHTML=`${time_left}`},1000)
     }
 
 //This is closing the Event Listener for DOMContentLoaded
