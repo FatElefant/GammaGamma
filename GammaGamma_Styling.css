@@ -1,13 +1,14 @@
 /* Generic page styling -----------------------------------------------------------------------------------*/
 body {
-  background-color: lightslategrey; }
+  background-color: dimgrey;
+  font-family: Verdana, sans-serif; }
 
 h1 {
   padding: 30px; }
 
 /* Navbar styling ---------------------------------------------------------------------------------------*/
 #navbar2 {
-  background-color: blanchedalmond;
+  background-color: mediumblue;
   font-weight: bold;
   font-size: 25px;
   width: 100%;
@@ -20,44 +21,44 @@ h1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: blanchedalmond; }
+  background-color: mediumblue; }
 
 #navbar2 li {
   float: left; }
 
 #navbar2 a {
   display: block;
-  color: black;
+  color: lightsteelblue;
   text-align: center;
   padding: 5px 20px;
   text-decoration: none; }
 
 /* Change the link color to #111 (black) on hover */
 #navbar2 li a:hover {
-  background-color: black;
-  color: blanchedalmond;
+  background-color: lightsteelblue;
+  color: mediumblue;
   text-decoration: none; }
 
 /* Index styling ---------------------------------------------------------------------------------------------*/
 #firstblock {
-  color: blanchedalmond;
-  background-color: black; }
+  color: mediumblue;
+  background-color: lightsteelblue; }
 
 #secblock {
   color: lightcoral;
-  background-color: lightslategrey; }
+  background-color: dimgrey; }
 
 #thirdblock {
-  color: black;
-  background-color: blanchedalmond; }
+  color: lightsteelblue;
+  background-color: mediumblue; }
 
 #fourthblock {
   color: lightcoral;
-  background-color: blanchedalmond; }
+  background-color: mediumblue; }
 
 /* SKUNK stying -------------------------------------------------------------------------------------------- */
 #roll_dice_button {
-  background-color: blanchedalmond;
+  background-color: mediumblue;
   padding: 30px;
   radius: 6px; }
 
@@ -67,7 +68,7 @@ h1 {
   radius: 6px; }
 
 #skunk_score_card th {
-  background-color: blanchedalmond;
+  background-color: mediumblue;
   color: white;
   font-weight: bold;
   border: 3px solid;
