@@ -1,0 +1,67 @@
+/* Navbar styling ---------------------------------------------------------------------------------------*/
+#navbar2 {
+ background-color: mediumseagreen;
+ font-weight:bold;
+ font-size: 25px;
+ width: 100%;
+ position: static;
+ top: 0px;
+ z-index: 1;
+}
+
+#navbar2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: mediumseagreen;
+}
+
+#navbar2 li {
+  float: left;
+}
+
+#navbar2 a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#navbar2 li a:hover {
+  background-color: black;
+  color: mediumseagreen;
+  text-decoration: none;
+}
+
+
+
+
+/* SKUNK stying -------------------------------------------------------------------------------------------- */
+#roll_dice_button {
+  background-color: mediumseagreen;
+  padding:30px;
+  radius:6px;
+}
+#end_round_button {
+  background-color: gray;
+  padding:30px;
+  radius:6px;
+}
+
+#skunk_score_card th {
+  background-color: mediumseagreen;
+  color: white;
+  font-weight: bold;
+  border: 3px solid;
+  border-collapse: collapse;
+  border-color: black;
+  padding: 10px;
+  width: 300px;
+}
+
+#skunk_score_card td {
+  padding:5px;
+}
