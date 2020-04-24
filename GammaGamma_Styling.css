@@ -1,13 +1,13 @@
 /* Generic page styling -----------------------------------------------------------------------------------*/
 body {
-  background-color: darkslategrey; }
+  background-color: lightslategrey; }
 
 h1 {
   padding: 30px; }
 
 /* Navbar styling ---------------------------------------------------------------------------------------*/
 #navbar2 {
-  background-color: firebrick;
+  background-color: blanchedalmond;
   font-weight: bold;
   font-size: 25px;
   width: 100%;
@@ -20,7 +20,7 @@ h1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: firebrick; }
+  background-color: blanchedalmond; }
 
 #navbar2 li {
   float: left; }
@@ -35,29 +35,29 @@ h1 {
 /* Change the link color to #111 (black) on hover */
 #navbar2 li a:hover {
   background-color: black;
-  color: firebrick;
+  color: blanchedalmond;
   text-decoration: none; }
 
 /* Index styling ---------------------------------------------------------------------------------------------*/
 #firstblock {
-  color: firebrick;
+  color: blanchedalmond;
   background-color: black; }
 
 #secblock {
   color: lightcoral;
-  background-color: darkslategrey; }
+  background-color: lightslategrey; }
 
 #thirdblock {
   color: black;
-  background-color: firebrick; }
+  background-color: blanchedalmond; }
 
 #fourthblock {
   color: lightcoral;
-  background-color: firebrick; }
+  background-color: blanchedalmond; }
 
 /* SKUNK stying -------------------------------------------------------------------------------------------- */
 #roll_dice_button {
-  background-color: firebrick;
+  background-color: blanchedalmond;
   padding: 30px;
   radius: 6px; }
 
@@ -67,7 +67,7 @@ h1 {
   radius: 6px; }
 
 #skunk_score_card th {
-  background-color: firebrick;
+  background-color: blanchedalmond;
   color: white;
   font-weight: bold;
   border: 3px solid;
