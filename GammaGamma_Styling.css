@@ -1,6 +1,9 @@
+/* Light purple */
+/* Hardcore pink */
+/* Dark grey */
 /* Generic page styling -----------------------------------------------------------------------------------*/
 body {
-  background-color: dimgrey;
+  background-color: #a59ba0;
   font-family: Verdana, sans-serif; }
 
 h1 {
@@ -8,67 +11,68 @@ h1 {
 
 /* Navbar styling ---------------------------------------------------------------------------------------*/
 #navbar2 {
-  background-color: mediumblue;
+  width: 2000px;
   font-weight: bold;
   font-size: 25px;
-  width: 100%;
-  position: static;
+  position: relative;
+  right: 10px;
   top: 0px;
-  z-index: 1; }
+  z-index: 1;
+  margin: 0; }
 
 #navbar2 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: mediumblue; }
+  background-color: #363636; }
 
 #navbar2 li {
   float: left; }
 
 #navbar2 a {
   display: block;
-  color: lightsteelblue;
+  color: #fd1094;
   text-align: center;
   padding: 5px 20px;
   text-decoration: none; }
 
 /* Change the link color to #111 (black) on hover */
 #navbar2 li a:hover {
-  background-color: lightsteelblue;
-  color: mediumblue;
+  background-color: #fd1094;
+  color: #363636;
   text-decoration: none; }
 
 /* Index styling ---------------------------------------------------------------------------------------------*/
 #firstblock {
-  color: mediumblue;
-  background-color: lightsteelblue; }
+  color: #a59ba0;
+  background-color: #fd1094; }
 
 #secblock {
-  color: lightcoral;
-  background-color: dimgrey; }
+  color: #363636;
+  background-color: pink; }
 
 #thirdblock {
-  color: lightsteelblue;
-  background-color: mediumblue; }
+  color: #fd1094;
+  background-color: #a59ba0; }
 
 #fourthblock {
-  color: lightcoral;
-  background-color: mediumblue; }
+  color: #363636;
+  background-color: #fd1094; }
 
 /* SKUNK stying -------------------------------------------------------------------------------------------- */
 #roll_dice_button {
-  background-color: mediumblue;
+  background-color: pink;
   padding: 30px;
   radius: 6px; }
 
 #end_round_button {
-  background-color: lightcoral;
+  background-color: pink;
   padding: 30px;
   radius: 6px; }
 
 #skunk_score_card th {
-  background-color: mediumblue;
+  background-color: #fd1094;
   color: white;
   font-weight: bold;
   border: 3px solid;
@@ -98,18 +102,24 @@ h1 {
   padding: 10px; }
 
 #large_number_button {
-  background-color: gray;
+  background-color: #363636;
   height: 40px;
   width: 200px;
   margin-left: 80px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border-color: #fd1094;
+  font-weight: bold;
+  color: #fd1094; }
 
 #small_number_button {
-  background-color: gray;
+  background-color: #363636;
   height: 40px;
   width: 200px;
-  margin-left: 100px;
-  border-radius: 5px; }
+  margin-left: 80px;
+  border-radius: 5px;
+  border-color: #fd1094;
+  font-weight: bold;
+  color: #fd1094; }
 
 @keyframes getready {
   0% {
@@ -144,14 +154,14 @@ h1 {
   animation-play-state: paused; }
 
 #clock {
-  background-color: lightcoral;
+  background-color: #363636;
   width: 200px;
   height: 210px;
   position: fixed;
   left: 750px;
   top: 100px;
   font-size: 100px;
-  color: black;
+  color: #fd1094;
   border-radius: 30%;
   border: 5px solid black;
   text-align: center;

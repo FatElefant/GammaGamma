@@ -1,14 +1,16 @@
-$pricolor: blanchedalmond;
-$seccolor: black;
-$tercolor: lightcoral;
-$quacolor: lightslategrey;
+$pricolor: #a59ba0; /* Light purple */
+$seccolor: #fd1094; /* Hardcore pink */
+$tercolor: rgb(54,54,54); /* Dark grey */
+$quacolor: pink;
+
 
 $prifontfam: Verdana, sans-serif;
 $secfontfam: Georgia, serif;
 
 /* Generic page styling -----------------------------------------------------------------------------------*/
 body {
-  background-color: $quacolor;
+  background-color: $pricolor;
+  font-family: $prifontfam;
 }
 
 h1 {
@@ -17,13 +19,14 @@ h1 {
 
 /* Navbar styling ---------------------------------------------------------------------------------------*/
 #navbar2 {
- background-color: $pricolor;
+ width:2000px;
  font-weight:bold;
  font-size: 25px;
- width: 100%;
- position: static;
+ position: relative;
+ right:10px;
  top: 0px;
  z-index: 1;
+ margin:0;
 }
 
 #navbar2 ul {
@@ -31,7 +34,7 @@ h1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: $pricolor;
+  background-color: $tercolor;
 }
 
 #navbar2 li {
@@ -49,7 +52,7 @@ h1 {
 /* Change the link color to #111 (black) on hover */
 #navbar2 li a:hover {
   background-color: $seccolor;
-  color: $pricolor;
+  color: $tercolor;
   text-decoration: none;
 }
 
@@ -68,23 +71,23 @@ h1 {
 }
 #fourthblock {
   color: $tercolor;
-  background-color: $pricolor;
+  background-color: $seccolor;
 }
 
 /* SKUNK stying -------------------------------------------------------------------------------------------- */
 #roll_dice_button {
-  background-color: $pricolor;
+  background-color: $quacolor;
   padding:30px;
   radius:6px;
 }
 #end_round_button {
-  background-color: $tercolor;
+  background-color: $quacolor;
   padding:30px;
   radius:6px;
 }
 
 #skunk_score_card th {
-  background-color: $pricolor;
+  background-color: $seccolor;
   color: white;
   font-weight: bold;
   border: 3px solid;
@@ -119,19 +122,25 @@ h1 {
 }
 
 #large_number_button {
-  background-color: gray;
+  background-color: $tercolor;
   height: 40px;
   width: 200px;
   margin-left: 80px;
   border-radius: 5px;
+  border-color: $seccolor;
+  font-weight: bold;
+  color: $seccolor;
 }
 
 #small_number_button {
-  background-color: gray;
+  background-color: $tercolor;
   height: 40px;
   width: 200px;
-  margin-left: 100px;
+  margin-left: 80px;
   border-radius: 5px;
+  border-color: $seccolor;
+  font-weight: bold;
+  color: $seccolor;
 }
 
 @keyframes getready {
@@ -170,7 +179,7 @@ h1 {
   left: 750px;
   top:100px;
   font-size: 100px;
-  color: black;
+  color: $seccolor;
   border-radius:30%;
   border: 5px solid black;
   text-align: center;

@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // When six numbers have been picked, gameplay switches ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     function startGame(){
-      target_number = Math.floor(Math.random()*1000);
+      target_number = Math.floor(Math.random()*900+100);
       target.style.animationPlayState = 'running';
       target.innerHTML = `Your target is: ${target_number}`;
       startTimer();
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     //Function for helping the clock with the time
     function startTimer(){
-      timerInterval = setInterval(()=>{time_passed += 1;time_left = time_limit-time_passed;document.getElementById('clock').innerHTML=`${time_left}`},1000)
+      timerInterval = setInterval(()=>{time_passed += 1;time_left = Math.max(time_limit-time_passed,0);document.getElementById('clock').innerHTML=`${time_left}`},1000)
     }
 
 //This is closing the Event Listener for DOMContentLoaded

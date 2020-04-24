@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded',function(){
   let navbar2_ul_countdown_link = document.createElement('a');
   navbar2_ul_countdown.appendChild(navbar2_ul_countdown_link);
       navbar2_ul_countdown_link.href = 'countdown.html';
-      navbar2_ul_countdown_link.innerHTML = 'countdown';
+      navbar2_ul_countdown_link.innerHTML = 'Countdown';
 
 
 

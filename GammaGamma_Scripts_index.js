@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function(){
   let fourthblock = document.createElement('h1');
   document.body.appendChild(fourthblock);
   fourthblock.id='fourthblock'
-  fourthblock.innerHTML='This text is tertiary colour and the background is primary colour.'
+  fourthblock.innerHTML='This text is tertiary colour and the background is secondary colour.'
 })
