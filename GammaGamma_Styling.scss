@@ -1,82 +1,99 @@
+$pricolor: firebrick;
+$seccolor: black;
+$tercolor: lightcoral;
+$quacolor: darkslategrey;
+
+$prifontfam: Verdana, sans-serif;
+$secfontfam: Georgia, serif;
+
 /* Generic page styling -----------------------------------------------------------------------------------*/
 body {
-  background-color: darkslategrey; }
+  background-color: $quacolor;
+}
 
 h1 {
-  padding: 30px; }
+  padding:30px;
+}
 
 /* Navbar styling ---------------------------------------------------------------------------------------*/
 #navbar2 {
-  background-color: firebrick;
-  font-weight: bold;
-  font-size: 25px;
-  width: 100%;
-  position: static;
-  top: 0px;
-  z-index: 1; }
+ background-color: $pricolor;
+ font-weight:bold;
+ font-size: 25px;
+ width: 100%;
+ position: static;
+ top: 0px;
+ z-index: 1;
+}
 
 #navbar2 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: firebrick; }
+  background-color: $pricolor;
+}
 
 #navbar2 li {
-  float: left; }
+  float: left;
+}
 
 #navbar2 a {
   display: block;
-  color: black;
+  color: $seccolor;
   text-align: center;
   padding: 5px 20px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* Change the link color to #111 (black) on hover */
 #navbar2 li a:hover {
-  background-color: black;
-  color: firebrick;
-  text-decoration: none; }
+  background-color: $seccolor;
+  color: $pricolor;
+  text-decoration: none;
+}
 
 /* Index styling ---------------------------------------------------------------------------------------------*/
 #firstblock {
-  color: firebrick;
-  background-color: black; }
-
+  color: $pricolor;
+  background-color: $seccolor;
+}
 #secblock {
-  color: lightcoral;
-  background-color: darkslategrey; }
-
+  color: $tercolor;
+  background-color: $quacolor;
+}
 #thirdblock {
-  color: black;
-  background-color: firebrick; }
-
+  color: $seccolor;
+  background-color: $pricolor;
+}
 #fourthblock {
-  color: lightcoral;
-  background-color: firebrick; }
+  color: $tercolor;
+  background-color: $pricolor;
+}
 
 /* SKUNK stying -------------------------------------------------------------------------------------------- */
 #roll_dice_button {
-  background-color: firebrick;
-  padding: 30px;
-  radius: 6px; }
-
+  background-color: $pricolor;
+  padding:30px;
+  radius:6px;
+}
 #end_round_button {
-  background-color: lightcoral;
-  padding: 30px;
-  radius: 6px; }
+  background-color: $tercolor;
+  padding:30px;
+  radius:6px;
+}
 
 #skunk_score_card th {
-  background-color: firebrick;
+  background-color: $pricolor;
   color: white;
   font-weight: bold;
   border: 3px solid;
   border-collapse: collapse;
   border-color: black;
   padding: 10px;
-  width: 300px; }
+  width: 300px;
+}
 
 #skunk_score_card td {
-  padding: 5px; }
-
-/*# sourceMappingURL=GammaGamma_Styling.css.map */
+  padding:5px;
+}
