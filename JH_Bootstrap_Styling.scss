@@ -1,0 +1,251 @@
+/* Colour selection */
+$pricolor: #a59ba0; /* Title text colour: Light Purple */
+$seccolor: #fd1094; /* Text background colour: Hardcore Pink */
+$tercolor: rgb(35,35,35); /* Dark background colour: Dark Grey */
+$quacolor: pink; /* Light title text colour for use with dark background: Pink */
+
+/* Font selection */
+$prifontfam: Verdana, sans-serif;
+$secfontfam: Georgia, serif;
+
+/* Control navbar and footer heights*/
+$navbar1_height: 120px;
+$navbar2_height: 50px;
+$footer1_height: 0px;
+$footer2_height: 0px;
+
+/* Control widths of content and left/right navbars */
+$navbarleft_width: 0px;
+$navbarright_width: 0px;
+
+/* ~~~~~~~~~~~~~ Setting up the basic grid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {
+  font-family: $prifontfam;
+
+  background-color: $quacolor;
+  display:grid;
+  grid-template-areas: "navbar1 navbar1 navbar1" "navbar2 navbar2 navbar2" "navbarleft sitecontent navbarright" "footer1 footer1 footer1" "footer2 footer2 footer2";
+  grid-column-gap: 0px;
+  margin:0; /* This is important for getting page elements to line up with the edges of the screen ('body' has some built in margin ...) */
+
+  /* Note: control the width of colums at top of page! */
+  grid-template-columns: $navbarleft_width auto $navbarright_width;
+
+  /* Note: control the height at top of page! */
+  /* Note: Need to adjust script to help navbar2 stick to the top of the screen by matching the first entry of grid-template-rows */
+  grid-template-rows: $navbar1_height $navbar2_height auto $footer1_height $footer2_height;
+
+
+}
+
+#navbar1 {
+  grid-area: navbar1;
+  height: $navbar1_height;
+  background-color: $tercolor;
+  width:100%;
+
+  display:grid;
+  align-content: center;
+  /* Text inside the navbar1*/
+  color: $seccolor;
+  font-size: 80px;
+  text-indent: 50px;
+}
+
+#navbar2 {
+  grid-area: navbar2;
+  height: $navbar2_height;
+  background-color: $seccolor;
+  width:100%;
+  align-items: center;
+  color: $tercolor;
+
+  /* This turns our navbar into a grid itself, giving us better control of what our links look like */
+  display:grid;
+  /* Note: you needs as many columns as you have links */
+  grid-template-columns: auto auto auto;
+  justify-content: flex-start; /* This puts the links on the left of the page */
+}
+
+#navbarleft {
+  grid-area: navbarleft;
+  width: $navbarleft_width;
+  background-color: $tercolor;
+}
+
+#navbarright {
+  grid-area: navbarright;
+  width: $navbarright_width;
+  background-color: $tercolor;
+}
+
+#footer1 {
+  grid-area: footer1;
+  height: $footer1_height;
+  background-color: $pricolor;
+}
+
+#footer2 {
+  grid-area: footer2;
+  height: $footer2_height;
+  background-color: $tercolor;
+  align-self: flex-end;
+  vertical-align: bottom;
+}
+
+#sitecontentspace {
+  grid-area: sitecontent;
+  background-color: $quacolor;
+}
+
+/* ~~~~~  STRUCTURE styling should come here ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Styling for links in navbar 2 */
+.navbar2_link {
+  display: flex;
+  align-items: center; /* This gets your links to sit in the middle of the navbar, no matter its size. */
+  justify-content: center;
+  font-weight: bold;
+  margin:0;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height:100%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar2_link a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar2_link:hover {
+  color: $seccolor;
+  background-color: $tercolor;
+}
+
+#ourGames {
+    display: flex;
+    align-items: center; /* This gets your links to sit in the middle of the navbar, no matter its size. */
+    justify-content: center;
+    font-weight: bold;
+    margin:0;
+    margin-left: 40px;
+    height:100%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* ~~~ Countdown Styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#countdown_number_display {
+  width: 600px;
+  height: 100px;
+  margin: 30px;
+  margin-bottom: 10px;
+  background-color: $pricolor;
+  border: 3px solid $tercolor;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(6,100px);
+  align-items: center;
+  justify-items: center; }
+
+.picked_number {
+  font-size: 50px;
+  padding: 10px; }
+
+#large_number_button {
+  background-color: $pricolor;
+  height: 70px;
+  width: 240px;
+  margin-left: 80px;
+  border-radius: 5px;
+  border: 3px solid $tercolor;
+  font-size: 25px;
+  font-weight: bold;
+  color: $tercolor; }
+
+#large_number_button:hover {
+  background-color: $seccolor;
+}
+
+#small_number_button {
+  background-color: $pricolor;
+  height: 70px;
+  width: 240px;
+  margin-left: 26px;
+  border-radius: 5px;
+  border: 3px solid $tercolor;
+  font-size: 25px;
+  font-weight: bold;
+  color: $tercolor; }
+
+#small_number_button:hover {
+  background-color: $seccolor;
+}
+
+@keyframes getready {
+  0% {
+    background-color: $pricolor; }
+  15% {
+    background-color: $seccolor; }
+  30% {
+    background-color: $pricolor; }
+  45% {
+    background-color: $seccolor; }
+  60% {
+    background-color: $pricolor; }
+  75% {
+    background-color: $seccolor; }
+  90% {
+    background-color: $pricolor; }
+  100% {
+    background-color: lightgreen; } }
+
+#target {
+  width: 600px;
+  height: 90px;
+  margin: 30px;
+  margin-top: 50px;
+  background-color: $pricolor;
+  border: 3px solid $tercolor;
+  border-radius: 20px;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
+  animation-name: getready;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; }
+
+
+@keyframes finalcountdown{
+0%{background-color: $pricolor}
+82%{background-color: $pricolor}
+85%{background-color: $seccolor}
+88%{background-color: $pricolor}
+91%{background-color: $seccolor}
+94%{background-color: $pricolor}
+97%{background-color: $seccolor}
+100%{background-color: $seccolor;top:200px;left:750px;}
+}
+
+#clock {
+  background-color: $pricolor;
+  width: 200px;
+  height: 210px;
+  position: fixed;
+  left: 750px;
+  top: 200px;
+  font-size: 100px;
+  color: black;
+  border-radius: 30%;
+  border: 5px solid $tercolor;
+  text-align: center;
+  padding-top: 90px;
+  animation-name: finalcountdown;
+  animation-duration: 36s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; }

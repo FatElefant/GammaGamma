@@ -1,33 +1,31 @@
 document.addEventListener('DOMContentLoaded',function(){
 // Create page elements -------------------------------------------------------------------------
-    // Set body id so it can be styled appropriately
-    document.body.id="countdown_body"
 
     // div where numbers will be shown once they are selected
     number_display = document.createElement('div');
-    document.body.appendChild(number_display);
+    document.getElementById('sitecontentcontainer').appendChild(number_display);
     number_display.id='countdown_number_display'
 
     // Large number button for selecting a large number
     large_number_button = document.createElement('button');
-    document.body.appendChild(large_number_button);
+    document.getElementById('sitecontentcontainer').appendChild(large_number_button);
     large_number_button.id="large_number_button";
     large_number_button.innerHTML = "Pick Large Number";
 
     // small number button for selecting a small number
     small_number_button = document.createElement('button');
-    document.body.appendChild(small_number_button);
+    document.getElementById('sitecontentcontainer').appendChild(small_number_button);
     small_number_button.id="small_number_button";
     small_number_button.innerHTML = "Pick Small Number";
 
     // target number that needs to be reached
     target = document.createElement('div');
-    document.body.appendChild(target);
+    document.getElementById('sitecontentcontainer').appendChild(target);
     target.id="target";
 
     // clock for counting down the 30 seconds
     clock = document.createElement('div');
-    document.body.appendChild(clock);
+    document.getElementById('sitecontentcontainer').appendChild(clock);
     clock.id="clock";
 
 
@@ -44,7 +42,7 @@ document.addEventListener('DOMContentLoaded',function(){
     let small_number_arr = small_number_arr_start;
 
     // Time variables for the clock
-    const time_limit = 30;
+    const time_limit = 33;
     let time_passed = 0;
     let time_left = time_limit;
     let timerInterval = null;
@@ -100,6 +98,7 @@ document.addEventListener('DOMContentLoaded',function(){
     function startGame(){
       target_number = Math.floor(Math.random()*900+100);
       target.style.animationPlayState = 'running';
+      clock.style.animationPlayState = 'running';
       target.innerHTML = `Your target is: ${target_number}`;
       startTimer();
     }
