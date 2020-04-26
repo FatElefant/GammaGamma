@@ -20,7 +20,7 @@ $navbarright_width: 0px;
 
 /* ~~~~~~~~~~~~~ Setting up the basic grid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
-  font-family: $prifontfam;
+  font-family: $secfontfam;
 
   background-color: $quacolor;
   display:grid;
@@ -63,7 +63,7 @@ body {
   /* This turns our navbar into a grid itself, giving us better control of what our links look like */
   display:grid;
   /* Note: you needs as many columns as you have links */
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(10,auto);
   justify-content: flex-start; /* This puts the links on the left of the page */
 }
 
@@ -163,6 +163,7 @@ body {
   margin-left: 80px;
   border-radius: 5px;
   border: 3px solid $tercolor;
+  font-family: $secfontfam;
   font-size: 25px;
   font-weight: bold;
   color: $tercolor; }
@@ -178,6 +179,7 @@ body {
   margin-left: 26px;
   border-radius: 5px;
   border: 3px solid $tercolor;
+  font-family: $secfontfam;
   font-size: 25px;
   font-weight: bold;
   color: $tercolor; }
@@ -235,17 +237,143 @@ body {
 #clock {
   background-color: $pricolor;
   width: 200px;
-  height: 210px;
+  height: 350px;
   position: fixed;
   left: 750px;
   top: 200px;
-  font-size: 100px;
+  font-size: 120px;
   color: black;
-  border-radius: 30%;
+  border-radius: 35%;
   border: 5px solid $tercolor;
-  text-align: center;
-  padding-top: 90px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   animation-name: finalcountdown;
   animation-duration: 36s;
   animation-fill-mode: forwards;
   animation-play-state: paused; }
+
+
+/* ~~~ Skunk Styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+$colWidth: 250px;
+
+#skunkContent {
+  display:grid;
+  grid-template-areas: "round_score round_score skunk_buttons dice dice" "score_card score_card score_card score_card score_card";
+  grid-template-columns: repeat(5,$colWidth);
+  grid-template-rows: 200px 300px;
+  color: $tercolor;
+}
+
+#dice_element {
+  grid-area: round_score;
+  margin-left: 20px;
+}
+
+#play_game_button {
+  height:50px;
+  width: 350px;
+  background-color: $seccolor;
+  color: $tercolor;
+  font-size: 30px;
+  font-family: $secfontfam;
+  font-weight: bold;
+}
+
+#button_container {
+  grid-area: skunk_buttons;
+}
+
+#roll_dice_button {
+  margin:10px;
+  height:80px;
+  width: $colWidth * 0.9;
+  background-color: $seccolor;
+  color: $tercolor;
+  font-size: 30px;
+  font-family: $secfontfam;
+  font-weight: bold;
+}
+
+#roll_dice_button:disabled{
+  color:rgb(80,80,80);
+  background-color: rgb(60,60,60);
+}
+
+#end_round_button {
+  margin:10px;
+  height:80px;
+  width: $colWidth * 0.9;
+  background-color: $seccolor;
+  color: $tercolor;
+  font-size: 30px;
+  font-family: $secfontfam;
+  font-weight: bold;
+}
+
+#end_round_button:disabled{
+  color:rgb(80,80,80);
+  background-color: rgb(60,60,60);
+}
+
+#skunk_score_card {
+  grid-area: score_card;
+  th {
+    font-size: 35px;
+    font-weight: bold;
+    color: $seccolor;
+    background-color: $tercolor;
+    height:40px;
+    width:$colWidth;
+  }
+  td {
+    vertical-align: top;
+    li {
+      list-style-type: none;
+      padding:0px;
+      margin:0px;
+    }
+  }
+}
+
+
+#cube_area{grid-area:dice;}
+
+
+@keyframes rollbaby{
+  0% {width: 20%; opacity:0;}
+  20% {width: 100%; opacity:0.1;}
+  40% {width: 20%; opacity:0.2;}
+  60% {width: 24%; opacity:0.4;}
+  80% {width: 20%; opacity:0.6;}
+  90% {width: 21%; opacity:0.8;}
+  100% {width: 20%; opacity:1;}
+}
+
+
+
+#cube1 {
+  width:20%;
+  margin:45px;
+  transform: rotate(-10deg);
+  animation-name: rollbaby;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+#cube_area2 {
+  position:relative;
+  bottom: 170px;
+  left: 240px;
+  z-index:2;
+}
+
+#cube2 {
+  width:20%;
+  transform: rotate(20deg);
+  animation-name: rollbaby;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}

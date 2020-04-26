@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // div where numbers will be shown once they are selected
     number_display = document.createElement('div');
     document.getElementById('sitecontentcontainer').appendChild(number_display);
-    number_display.id='countdown_number_display'
+    number_display.id='countdown_number_display';
 
     // Large number button for selecting a large number
     large_number_button = document.createElement('button');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded',function(){
     // Display the large number
     const picked_large_number = document.createElement('span');
     number_display.appendChild(picked_large_number);
-    picked_large_number.className = "picked_number"
+    picked_large_number.className = "picked_number";
     picked_large_number.innerHTML = `${large_number_arr[large_number_picked_index]}`;
 
     // Remove the number from the remaining large numbers

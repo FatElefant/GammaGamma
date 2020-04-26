@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   let item3 = document.createElement('div');
   document.getElementById('navbar2').appendChild(item3);
   item3.className='navbar2_link';
-  item3.innerHTML='Skunk';
+  item3.innerHTML='<a href="skunk.html">Skunk<\a>';
 
   // script to help navbar 2 stick to the top of the screen when scrolling
   window.onscroll = () => {
