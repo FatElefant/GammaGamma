@@ -137,7 +137,12 @@ body {
     font-weight: bold;
 }
 
-
+/* ~~~~~~~ Homepage styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#welcomemessage {
+  color: $tercolor;
+  font-size: 50px;
+  text-align: center;
+}
 /* ~~~ Countdown Styling ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #countdown_number_display {
   width: 600px;
